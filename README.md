@@ -1,1 +1,1 @@
-# finder
+# Community Event Finder
