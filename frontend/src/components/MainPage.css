@@ -1,8 +1,195 @@
-.main-page-container {
-    text-align: center;
-    margin-top: 50px;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+/* Apply the font to the entire body for consistency */
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* A light grey background for contrast */
+}
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
   
-  .btn-group {
-    margin-top: 20px;
+   /* Adjust as needed */
+  padding: 50px;
+  background-color: #3a30fc; /* A shade of purple */
+}
+
+.text-content {
+  flex: 1;
+  padding-right: 20px; /* Adjust spacing as needed */
+}
+
+.text-content h1 {
+  color: #FFFFFF; /* White color text */
+  font-family: 'Helvetica', sans-serif; /* Example font */
+  font-size: 3em; /* Adjust the size as needed */
+}
+
+.text-content p {
+  color: #FFFFFF; /* White color text */
+  font-family: 'Helvetica', sans-serif; /* Example font */
+  font-size: 1.3em; 
+  line-height: 1.2;/* Adjust the size as needed */
+}
+
+.image-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-content img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* removes bottom space under the image */
+}
+
+.btn-login,
+.btn-signup {
+  display: inline-block;
+  margin: 10px 5px; /* Space between buttons */
+  padding: 10px 20px; /* Button padding */
+  font-size: 16px; /* Adjust as needed */
+  cursor: pointer;
+  border: none; /* Removes the border */
+  color: #ffffff; /* Text color */
+}
+
+.btn-login {
+  background-color: #F75842; /* Login button color */
+}
+
+.btn-signup {
+  background-color: #F75842; /* Signup button color */
+}
+
+
+.navbar {
+  background-color: #2E3267; /* A darker shade of purple for contrast */
+  padding: 10px 0px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%; /* Ensures the navbar spans the full width */
+  display: flex;
+  justify-content: flex-end; /* Aligns nav items to the right */
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links .nav-item {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s;
+}
+
+.nav-links .nav-item:hover {
+  background-color: #7b2cbf;
+}
+
+/* ... other styles ... */
+
+/* Style for the About Us section placeholder */
+.about-container {
+  height: 500px; /* Temporary height */
+  background-color: #f3f3f3; /* A light background color */
+  /* Add more styles as needed */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.about-section {
+  background-color: #ffffff; /* Or any color you prefer */
+  padding: 50px 20px;
+  text-align: center; /* Center the heading and description */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the content horizontally */
+}
+
+.about-section h2 {
+  font-size: 4rem; /* Increased font size for the heading */
+  margin-bottom: 0.6rem;
+  color:#000000;
+}
+
+.about-section p {
+  font-size: 1rem; /* Slightly larger font size for the description */
+  color: #555; /* Soft black for the description text */
+  max-width: 1000px; /* Max width for optimal reading length */
+  margin-bottom: 1.3rem;/* Auto margins for horizontal centering and space below */
+}
+
+.feature-cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* space between the cards */
+  flex-wrap: wrap; /* enables responsive wrapping of cards */
+}
+
+.feature-card {
+  width: calc(33.333% - 40px); /* Adjust width for three cards in a row with margin */
+  margin: 0 20px; /* Uniform margin for symmetry */
+  padding: 2rem; /* More padding for a spacious card */
+  background: #F75842; /* Off-white background for cards */
+  border-radius: 10px; /* Rounded corners for a modern look */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Box-shadow for depth */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+.feature-card:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+}
+.feature-card h3 {
+  font-size: 2rem;
+  color: #fffcfc; /* dark grey for the title */
+  margin-bottom: 0.5rem;
+
+}
+
+.feature-card p {
+  font-size: 1.1rem;
+  color: #ede6e6; 
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .feature-card {
+    width: 100%; 
+    margin: 10pc;/* Full width on smaller screens */
   }
+}
+.about-section .about-description,
+.feature-card {
+  padding: 1rem; /* Less padding on smaller screens */
+}
+
+
+
+.footer {
+  background-color: #2E3267; /* Dark background for the footer */
+  color: #fff; /* White text color */
+  text-align: center; /* Center the text */
+  padding: 1rem 0; /* Padding on top and bottom */
+  margin-top: 2rem; /* Space above the footer */
+}
+
+.footer p {
+  margin: 0.5rem 0; /* Spacing between paragraphs */
+  font-size: 1rem;
+}

@@ -16,7 +16,7 @@ const ContactForm = () => {
     // Set up your Email.js service and template details
     const serviceId = 'service_m5m6c2u';
     const templateId = 'template_w26s26i';
-    const userId = 'rGl6rwddR2UJjcaqZ';
+    const userId = 'rGl6rwddR2UJjcaqZ'; 
 
     emailjs.sendForm(serviceId, templateId, form.current, userId)
       .then((result) => {

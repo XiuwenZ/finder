@@ -1,3 +1,4 @@
+
 // Footer.jsx
 import React from "react";
 import "./Footer.css";
@@ -12,22 +13,49 @@ const Footer = () => {
             <div className="row">
               {/* Column1 */}
               <div className="col-3">
-                <h4>THICC MEMES INC</h4>
+                 <a href="index.html" className="footer__logo">
+                <h4>Event Finders</h4>
                 <ul className="list-unstyled">
                   <li>342-420-6969</li>
-                  <li>Moscow, Russia</li>
-                  <li>123 Street South North</li>
+                  <li>New York, USA</li>
+                  <li>123 RTC Street</li>
                 </ul>
               </div>
               {/* Column2 */}
               <div className="col-3">
-                <h4>Stuff</h4>
-                <ul className="list-unstyled">
-                  <li>DANK MEMES</li>
-                  <li>OTHER STUFF</li>
-                  <li>GUD STUFF</li>
-                </ul>
+ 
+                      <h4>Contact Us</h4>
+                      <div>
+                        <p>+01 234 567 8910</p>
+                        <p>shakir260@gmail.com</p>
+                      </div>
+
+                      <ul className="footer__socials">
+                        <li>
+                          <a href="#">
+                            <i className="uil uil-facebook-f"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <i className="uil uil-instagram-alt"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <i className="uil uil-twitter"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <i className="uil uil-linkedin-alt"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
               </div>
+
               {/* Column3 */}
               <div className="col">
                 <h4>Contact Us</h4>

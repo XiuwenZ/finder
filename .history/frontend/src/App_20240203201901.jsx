@@ -4,9 +4,7 @@ import Navbar from './components/Navbar';
 import Header from './components/Header';
 import RegisteredEvent from './components/RegisteredEvent';
 import MoreEvents from './components/MoreEvents';
-
 import Footer from './components/Footer';
-
 import EventDetail from './components/EventDetail';
 
 function App() {
@@ -34,13 +32,13 @@ function App() {
         </>
       ) : (
         <>
-          <MainPage />
+          {/* <MainPage /> */}
+          12313
         </>
       )}
     </div>
   );
 }
-
 
 export default App;
 
