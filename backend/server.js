@@ -51,3 +51,25 @@ app.post('/add-event', async (req, res) => {
     }
   });
   
+  app.use(bodyParser.json());
+
+app.post('/signup', async (req, res) => {
+    const { email, firstname, lastname, username, password } = req.body;
+
+    const query = `
+        INSERT INTO users (email, firstname, lastname, username, password)
+        VALUES ($1, $2, $3, $4, $5)
+        RETURNING id, email, firstname, lastname, username, role, created_at;
+    `;
+    const values = [email, firstname, lastname, username, password];
+
+    try {
+        const result = await db.query(query, values);
+        res.status(201).json(result.rows[0]);
+    } catch (error) {
+        if (error.code === '23505') { // Unique constraint violation
+            return res.status(400).json({ message: "Email or username already exists" });
+        }
+        res.status(500).json({ error: error.message });
+    }
+});
