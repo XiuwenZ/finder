@@ -6,10 +6,6 @@
   margin: 0;
 }
 
-.auth-container input::placeholder {
-  color: #f7f5f5;
-}
-
 .auth-container {
   max-width: 300px;
   margin-top: 30rem;
@@ -25,6 +21,7 @@ input {
   margin: 0.5rem 0;
   border: 1px solid #ccc;
   border-radius: 4px;
+  color:aliceblue
   background-color: #424890;
 }
 

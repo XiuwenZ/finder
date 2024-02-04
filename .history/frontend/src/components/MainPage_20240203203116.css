@@ -7,16 +7,15 @@ body {
   padding: 0;
   background-color: #f4f4f4; /* A light grey background for contrast */
 }
-
 .main-container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 80vh;
-
-  /* Adjust as needed */
+  
+   /* Adjust as needed */
   padding: 50px;
-  background-color: #6c63ff; /* A shade of purple */
+  background-color: #3a30fc; /* A shade of purple */
 }
 
 .text-content {
@@ -25,16 +24,16 @@ body {
 }
 
 .text-content h1 {
-  color: #ffffff; /* White color text */
+  color: #FFFFFF; /* White color text */
   font-family: 'Helvetica', sans-serif; /* Example font */
   font-size: 3em; /* Adjust the size as needed */
 }
 
 .text-content p {
-  color: #ffffff; /* White color text */
+  color: #FFFFFF; /* White color text */
   font-family: 'Helvetica', sans-serif; /* Example font */
-  font-size: 1.3em;
-  line-height: 1.2; /* Adjust the size as needed */
+  font-size: 1.3em; 
+  line-height: 1.2;/* Adjust the size as needed */
 }
 
 .image-content {
@@ -62,15 +61,16 @@ body {
 }
 
 .btn-login {
-  background-color: #f75842; /* Login button color */
+  background-color: #F75842; /* Login button color */
 }
 
 .btn-signup {
-  background-color: #f75842; /* Signup button color */
+  background-color: #F75842; /* Signup button color */
 }
 
+
 .navbar {
-  background-color: #2e3267; /* A darker shade of purple for contrast */
+  background-color: #2E3267; /* A darker shade of purple for contrast */
   padding: 10px 0px;
   position: sticky;
   top: 0;
@@ -79,6 +79,7 @@ body {
   display: flex;
   justify-content: flex-end; /* Aligns nav items to the right */
 }
+
 
 .nav-links {
   list-style: none;
@@ -113,6 +114,7 @@ html {
   scroll-behavior: smooth;
 }
 
+
 .about-section {
   background-color: #ffffff; /* Or any color you prefer */
   padding: 50px 20px;
@@ -125,14 +127,14 @@ html {
 .about-section h2 {
   font-size: 4rem; /* Increased font size for the heading */
   margin-bottom: 0.6rem;
-  color: #000000;
+  color:#000000;
 }
 
 .about-section p {
   font-size: 1rem; /* Slightly larger font size for the description */
   color: #555; /* Soft black for the description text */
   max-width: 1000px; /* Max width for optimal reading length */
-  margin-bottom: 1.3rem; /* Auto margins for horizontal centering and space below */
+  margin-bottom: 1.3rem;/* Auto margins for horizontal centering and space below */
 }
 
 .feature-cards-container {
@@ -143,14 +145,12 @@ html {
 }
 
 .feature-card {
-  width: calc(
-    33.333% - 40px
-  ); /* Adjust width for three cards in a row with margin */
+  width: calc(33.333% - 40px); /* Adjust width for three cards in a row with margin */
   margin: 0 20px; /* Uniform margin for symmetry */
   padding: 2rem; /* More padding for a spacious card */
-  background: #f75842; /* Off-white background for cards */
+  background: #F75842; /* Off-white background for cards */
   border-radius: 10px; /* Rounded corners for a modern look */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box-shadow for depth */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Box-shadow for depth */
   transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
 }
 .feature-card:hover {
@@ -160,17 +160,18 @@ html {
   font-size: 2rem;
   color: #fffcfc; /* dark grey for the title */
   margin-bottom: 0.5rem;
+
 }
 
 .feature-card p {
   font-size: 1.1rem;
-  color: #ede6e6;
+  color: #ede6e6; 
 }
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .feature-card {
-    width: 100%;
-    margin: 10pc; /* Full width on smaller screens */
+    width: 100%; 
+    margin: 10pc;/* Full width on smaller screens */
   }
 }
 .about-section .about-description,
@@ -178,8 +179,10 @@ html {
   padding: 1rem; /* Less padding on smaller screens */
 }
 
+
+
 .footer {
-  background-color: #2e3267; /* Dark background for the footer */
+  background-color: #2E3267; /* Dark background for the footer */
   color: #fff; /* White text color */
   text-align: center; /* Center the text */
   padding: 1rem 0; /* Padding on top and bottom */
@@ -190,4 +193,3 @@ html {
   margin: 0.5rem 0; /* Spacing between paragraphs */
   font-size: 1rem;
 }
-

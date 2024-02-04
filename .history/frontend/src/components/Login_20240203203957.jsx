@@ -1,30 +1,22 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // Assuming you're using react-router for navigation
-import './Signup.css';
+import './Login.css';
 
-const Signup = () => {
-  const [name, setName] = useState('');
+const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSignup = (event) => {
+  const handleLogin = (event) => {
     event.preventDefault();
-    // Handle signup logic here
-    console.log('Signup with:', name, email, password);
+    // Handle login logic here
+    console.log('Login with:', email, password);
   };
 
   return (
     <div className="wrap-container">
       <div className="auth-container">
-        <h2>Sign Up</h2>
-        <form onSubmit={handleSignup}>
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            placeholder="Name"
-            required
-          />
+        <h2>Login</h2>
+        <form onSubmit={handleLogin}>
           <input
             type="email"
             value={email}
@@ -39,13 +31,13 @@ const Signup = () => {
             placeholder="Password"
             required
           />
-          <button type="submit">Sign Up</button>
+          <button type="submit">Log In</button>
         </form>
-        <Link to="/login">Already have an account? Log in</Link>
+        <Link to="/signup">Need an account? Sign up</Link>
       </div>
     </div>
   );
 };
 
-export default Signup;
+export default Login;
 
