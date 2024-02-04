@@ -1,7 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './MainPage.css';
-import eventImage from '../assets/event.jpg';
+// import eventImage from '../assets/event.jpg';
+import course2 from '../assets/course2.jpg';
 
 const Mainpage = () => {
   const navigate = useNavigate();
@@ -48,7 +49,7 @@ const Mainpage = () => {
           </button>
         </div>
         <div className="image-content">
-          <img src={eventImage} alt="Event" />
+          <img src={course2} alt="Event" />
         </div>
       </div>
 
