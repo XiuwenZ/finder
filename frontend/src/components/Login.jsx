@@ -1,14 +1,16 @@
 // login.jsx
-
 import React, { useState, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Login.css';
-import { AuthContext } from './AuthContext.jsx';
+import AuthContext from './AuthContext.jsx';
+
+
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
+  const { setAuthData } = useContext(AuthContext); // Use the setAuthData function from AuthContext
 
   const handleLogin = async (event) => {
     event.preventDefault();
@@ -27,6 +29,7 @@ const Login = () => {
         console.log('Login successful!');
         const { token } = await response.json();
         localStorage.setItem('token', token);
+        setAuthData(token); // Update the authentication state
         navigate('/dashboard');
       } else {
         console.log('Login failed. Invalid email or password.');
@@ -35,7 +38,7 @@ const Login = () => {
       console.error('Error during login:', error.message);
     }
   };
-  
+    
 
   return (
     <div className="auth-container">

@@ -1,13 +1,13 @@
-import { useState } from 'react';
+// App.jsx
+
+import React, { useState } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
 import RegisteredEvent from './components/RegisteredEvent';
 import MoreEvents from './components/MoreEvents';
-
-import Footer from './components/Footer';
-
 import EventDetail from './components/EventDetail';
+import AuthContext from './components/AuthContext'; // import AuthContext
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
@@ -23,24 +23,24 @@ function App() {
   }
 
   return (
-    <div className="app">
-      {isLoggedIn ? (
-        <>
-          <Navbar username={username} onLogout={onLogout} />
-          <Header />
-          <RegisteredEvent />
-          <MoreEvents />
-          <Footer />
-        </>
-      ) : (
-        <>
-          <MainPage />
-        </>
-      )}
-    </div>
+    <AuthContext.Provider value={{ isLoggedIn, setIsLoggedIn, username, setUsername }}> {/* use AuthContext.Provider */}
+      <div className="app">
+        {isLoggedIn ? (
+          <>
+            <Navbar username={username} onLogout={onLogout} />
+            <Header />
+            <RegisteredEvent />
+            <MoreEvents />
+            <Footer />
+          </>
+        ) : (
+          <>
+            <MainPage />
+          </>
+        )}
+      </div>
+    </AuthContext.Provider>
   );
 }
 
-
 export default App;
-

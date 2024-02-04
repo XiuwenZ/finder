@@ -34,29 +34,29 @@ const EventDetail = () => {
     </>
   );
 
-  // const { eventName, eventPlace, eventDetail } = event;
-  // return (
-  //   <div className="event-card">
-  //     <div className="event-header">
-  //       <h1 className="event-title">{eventName}</h1>
-  //       <div className="event-date">Sep 14</div>
-  //     </div>
-  //     <div className="event-info">
-  //       By Children Community <span>👍🏻😮❤️</span> 2.1k People are Joined
-  //     </div>
-  //     <div className="event-schedule">
-  //       <p>
-  //         <strong>Monday</strong>
-  //       </p>
-  //       <p>08.00 pm - 22.00 pm</p>
-  //       <p>{eventPlace}</p>
-  //     </div>
-  //     <div className="event-map"></div>
-  //     <div className="event-description">
-  //       <p>{eventDetail}</p>
-  //     </div>
-  //   </div>
-  // );
+  const { eventName, eventPlace, eventDetail } = event;
+  return (
+    <div className="event-card">
+      <div className="event-header">
+        <h1 className="event-title">{eventName}</h1>
+        <div className="event-date">Sep 14</div>
+      </div>
+      <div className="event-info">
+        By Children Community <span>👍🏻😮❤️</span> 2.1k People are Joined
+      </div>
+      <div className="event-schedule">
+        <p>
+          <strong>Monday</strong>
+        </p>
+        <p>08.00 pm - 22.00 pm</p>
+        <p>{eventPlace}</p>
+      </div>
+      <div className="event-map"></div>
+      <div className="event-description">
+        <p>{eventDetail}</p>
+      </div>
+    </div>
+  );
 };
 
 export default EventDetail;
