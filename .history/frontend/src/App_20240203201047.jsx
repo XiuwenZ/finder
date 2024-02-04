@@ -8,7 +8,7 @@ import Footer from './components/Footer';
 import EventDetail from './components/EventDetail';
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [username, setUsername] = useState('');
 
   function onLogin(username) {

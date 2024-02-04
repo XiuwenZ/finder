@@ -32,7 +32,8 @@ function App() {
         </>
       ) : (
         <>
-          <MainPage />
+          {/* <MainPage /> */}
+          12313
         </>
       )}
     </div>
