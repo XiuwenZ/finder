@@ -1,22 +1,41 @@
-// App.jsx
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AuthProvider } from './components/AuthContext'; // Corrected import path
-import Login from './components/Login';
-import Dashboard from './components/Dashboard';
-import Signup from './components/Signup';
+import { useState } from 'react';
+import './App.css';
+import Navbar from './components/Navbar';
+import Header from './components/Header';
+import RegisteredEvent from './components/RegisteredEvent';
+import MoreEvents from './components/MoreEvents';
+import Footer from './components/Footer.jsx';
+import EventDetail from './components/EventDetail';
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [username, setUsername] = useState('');
+
+  function onLogin(username) {
+    setUsername(username);
+    setIsLoggedIn(true);
+  }
+
+  function onLogout() {
+    setIsLoggedIn(false);
+  }
+
   return (
-    <Router>
-      <AuthProvider>
-        <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-        </Routes>
-      </AuthProvider>
-    </Router>
+    <div className="app">
+      {isLoggedIn ? (
+        <>
+          <Navbar username={username} onLogout={onLogout} />
+          <Header />
+          <RegisteredEvent />
+          <MoreEvents />
+          <Footer />
+        </>
+      ) : (
+        <>
+          <MainPage />
+        </>
+      )}
+    </div>
   );
 }
 
