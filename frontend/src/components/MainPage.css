@@ -15,7 +15,7 @@ body {
   
    /* Adjust as needed */
   padding: 50px;
-  background-color: #3a30fc; /* A shade of purple */
+  background-color: #7579ae; /* A shade of purple */
 }
 
 .text-content {
@@ -46,6 +46,9 @@ body {
 .image-content img {
   max-width: 100%;
   height: auto;
+  border-radius: 1em;
+  border: 2em;
+  border-color: #f4f4f4;
   display: block; /* removes bottom space under the image */
 }
 
@@ -60,26 +63,43 @@ body {
   color: #ffffff; /* Text color */
 }
 
-.btn-login {
-  background-color: #F75842; /* Login button color */
+.btn-login, .btn-signup {
+  background-color: #f85f4a; /* Login button color */
 }
 
-.btn-signup {
-  background-color: #F75842; /* Signup button color */
-}
 
 
 .navbar {
-  background-color: #2E3267; /* A darker shade of purple for contrast */
-  padding: 10px 0px;
+  background-color: #424874; /* A darker shade of purple for contrast */
+  padding: .4em;
   position: sticky;
   top: 0;
   z-index: 1000;
   width: 100%; /* Ensures the navbar spans the full width */
   display: flex;
-  justify-content: flex-end; /* Aligns nav items to the right */
+  justify-content: space-between; /* Aligns nav items to the right */
+
 }
 
+.logo {
+  height: 100%;
+  width: auto;
+  background-color: #ede6e6;
+  border-radius: 50%;
+}
+
+.logoGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: .2em;
+  font-family: 'Avantgarde';
+}
+
+.title {
+  color: #ede6e6;
+}
 
 .nav-links {
   list-style: none;
@@ -116,7 +136,7 @@ html {
 
 
 .about-section {
-  background-color: #ffffff; /* Or any color you prefer */
+  background-color: rgb(246, 247, 253); /* Or any color you prefer */
   padding: 50px 20px;
   text-align: center; /* Center the heading and description */
   display: flex;
@@ -148,7 +168,7 @@ html {
   width: calc(33.333% - 40px); /* Adjust width for three cards in a row with margin */
   margin: 0 20px; /* Uniform margin for symmetry */
   padding: 2rem; /* More padding for a spacious card */
-  background: #F75842; /* Off-white background for cards */
+  background: #fb6d5a; /* Off-white background for cards */
   border-radius: 10px; /* Rounded corners for a modern look */
   box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Box-shadow for depth */
   transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
@@ -192,4 +212,10 @@ html {
 .footer p {
   margin: 0.5rem 0; /* Spacing between paragraphs */
   font-size: 1rem;
+}
+
+.eventHeader{
+  padding: 1em;
+  font-size: 2.5em;
+  background-color: #F4EEFF;
 }
