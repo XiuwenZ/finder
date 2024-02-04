@@ -1,7 +1,7 @@
 const axios = require('axios');
 const db = require('../db'); // Your database connection file
+require('dotenv').config({ path: 'E:/gitHousing/GitHubRepos/finder/backend/.env' });
 
-const eventbriteApiKey = 'SW5YMBNXNHOW5Z75SYEW';
 const eventbriteBaseUrl = 'https://www.eventbriteapi.com/v3/events/';
 
 const eventIds = ['804007828057', '801863494297', '779617927207', '797798054457', '786644734577', '501228145877', '801919140737', '792240180707', '808377588127']; // Replace with your event IDs
