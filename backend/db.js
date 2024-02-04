@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config({ path: 'E:/gitHousing/GitHubRepos/finder/backend/.env' });
 const { Pool } = require('pg');
 
 const pool = new Pool({
