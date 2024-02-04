@@ -6,9 +6,25 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  const login = () => {
-    // Implement your login logic and set isAuthenticated to true
-    setIsAuthenticated(true);
+  //fetch from the endpoint
+  const login = (username, password) => {
+    // Implement your login logic here
+    // For example, you might make a request to your API
+    fetch('/api/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ username, password }),
+    })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          setIsAuthenticated(true);
+        } else {
+          // Handle login failure
+        }
+      });
   };
 
   const logout = () => {
