@@ -53,23 +53,34 @@ app.post('/add-event', async (req, res) => {
   
   app.use(bodyParser.json());
 
-app.post('/signup', async (req, res) => {
-    const { email, firstname, lastname, username, password } = req.body;
-
-    const query = `
-        INSERT INTO users (email, firstname, lastname, username, password)
-        VALUES ($1, $2, $3, $4, $5)
-        RETURNING id, email, firstname, lastname, username, role, created_at;
-    `;
-    const values = [email, firstname, lastname, username, password];
-
+  app.get('/users', async (req, res) => {
+    const query = 'SELECT * FROM users';
+  
     try {
-        const result = await db.query(query, values);
-        res.status(201).json(result.rows[0]);
+      const result = await db.query(query);
+      res.status(200).json(result.rows);
     } catch (error) {
-        if (error.code === '23505') { // Unique constraint violation
-            return res.status(400).json({ message: "Email or username already exists" });
-        }
-        res.status(500).json({ error: error.message });
+      res.status(500).json({ error: error.message });
     }
-});
+  });
+
+  app.post('/signup', async (req, res) => {
+    const { username, email, password } = req.body;
+  
+  
+    const insertUserQuery = `
+      INSERT INTO users (username, email, password)
+      VALUES ($1, $2, $3)
+      RETURNING id, username, email;
+    `;
+  
+    try {
+      const result = await db.query(insertUserQuery, [username, email, password]);
+      res.status(201).json(result.rows[0]);
+    } catch (error) {
+      // Handle errors, such as duplicate email
+      console.error('Error in /signup:', error);
+      res.status(500).json({ error: error.message });
+    }
+  });
+  

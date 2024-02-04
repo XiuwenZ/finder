@@ -1,5 +1,5 @@
 const axios = require('axios');
-const db = require('../db'); // Your database connection file
+const db = require('../db'); 
 require('dotenv').config({ path: 'E:/gitHousing/GitHubRepos/finder/backend/.env' });
 
 const eventbriteBaseUrl = 'https://www.eventbriteapi.com/v3/events/';

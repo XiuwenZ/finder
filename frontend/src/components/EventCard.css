@@ -1,0 +1,54 @@
+.event-card {
+    display: flex;
+    border: 1px solid #ccc;
+    margin: 10px;
+    background-color: rgb(243, 246, 255);
+    width: 75%;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .event-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+  }
+  
+  .event-info {
+    flex-grow: 1;
+  }
+  
+  .event-name {
+    margin: 0 0 10px 0;
+    color: #333;
+  }
+  
+  .event-summary {
+    margin: 0 0 10px 0;
+    color: #666;
+  }
+  
+  .event-date {
+    margin: 0 0 15px 0;
+    font-style: italic;
+    color: #333;
+  }
+  
+  .attend-button {
+    background-color: #474F7A;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .attend-button:hover {
+    background-color: #0056b3;
+  }
+  

@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './MainPage.css';
 import eventImage from '../assets/event.jpg';
+import logo from '../assets/logo.png';
+import EventsList from './EventsList';
 
 const Mainpage = () => {
   const navigate = useNavigate();
@@ -14,9 +16,33 @@ const Mainpage = () => {
     navigate('/signup');
   };
 
+  const [events, setEvents] = useState([]);
+
+  useEffect(() => {
+    const fetchEvents = async () => {
+      try {
+        const response = await fetch('http://localhost:4000/events'); // Adjust the URL to your API endpoint
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        setEvents(data);
+      } catch (error) {
+        console.error('Fetch error:', error);
+      }
+    };
+
+    fetchEvents();
+  }, []);
+
   return (
     <>
       <nav className="navbar">
+        <div class="logoGroup">
+            <img class="logo" src={logo}/>
+            <h1 class="title">Helping Hand</h1>
+        </div>
+
         <ul className="nav-links">
           <li>
             <a href="#home" className="nav-item">
@@ -50,6 +76,11 @@ const Mainpage = () => {
         <div className="image-content">
           <img src={eventImage} alt="Event" />
         </div>
+      </div>
+
+      <div className="events-section">
+        <h2 class="eventHeader">Upcoming Events Near You!</h2>
+        <EventsList events={events} />
       </div>
 
       <div id="about" className="about-section">
